@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiktor Zielinski - Personal Website</title>
+    <style>
+        :root {
+            --primary-color: #003366; /* EUI Blue */
+            --text-color: #333333;
+            --link-color: #0055a4;
+            --bg-color: #f9f9f9;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 2rem;
+        }
+        h1 {
+            color: var(--primary-color);
+            margin: 0 0 0.5rem 0;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact-info, .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-info li, .sidebar-links li {
+            margin-bottom: 0.5rem;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-img {
+                margin: 0 0 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="https://www.eui.eu/Content-Types-Assets/Uploads/People/Photos/Zielinski-Wiktor.x7e57038c.jpg?w=800&h=800" alt="Wiktor Zielinski" class="profile-img">
+        <div>
+            <h1>Wiktor Zielinski</h1>
+            <p><strong>PhD student in Economics</strong> at the European University Institute in Florence.</p>
+            <p>My interests lie in macro spatial and development economics. Questions that I find troubling refer to non-convergence of regions in time and how infrastructure & transportation affects this issue.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <h2>Work in Progress</h2>
+            <ul>
+                <li>Regional Development and Imperfect Mobility</li>
+                <li>Climate Change Adaptation in Rural Economies with <a href="https://sites.google.com/site/andregroeger/home" target="_blank">Andre Groeger</a> and <a href="https://brunoconteleite.github.io" target="_blank">Bruno Conte</a></li>
+            </ul>
+
+            <h2>Graduate Projects</h2>
+            <ul>
+                <li><a href="https://github.com/wiktorze/Thesis/blob/main/PH_demolition_crime_WZ.pdf" target="_blank">Public Housing Demolition and Crime</a>, Master Thesis, Sciences Po, supervision of prof. Roberto Galbiati and prof. Florian Oswald</li>
+                <li><a href="https://wiktorze.github.io/ABLR_2022.jl" target="_blank">Replication</a> in Julia of Adamopoulos, Tasso, Loren Brandt, Jessica Leight, and Diego Restuccia. 2022. "Misallocation, Selection, and Productivity: A Quantitative Analysis With Panel Data From China." <em>Econometrica</em> 90 (3): 1261–82.</li>
+                <li><a href="https://github.com/wiktorze/Labor_economics/blob/main/Zielinski_Replication_CLP.pdf" target="_blank">Referee report and replication</a> of Clemens, Michael A., Ethan G. Lewis, and Hannah M. Postel. 2018. "Immigration Restrictions as Active Labor Market Policy: Evidence from the Mexican Bracero Exclusion." <em>American Economic Review</em> 108 (6): 1468–87.</li>
+                <li><a href="https://github.com/wiktorze/Industrial-Organizations/blob/main/ZielinskiW_replication/Data/ZIELINSKIW_IO_replication.pdf" target="_blank">Replication and modification</a> of Berry, Steven, and Panle Jia. 2010. "Tracing the Woes: An Empirical Analysis of the Airline Industry." <em>American Economic Journal: Microeconomics</em> 2 (3): 1–43.</li>
+                <li><a href="https://github.com/wiktorze/Industrial-Organizations/blob/main/ZielinskiW_replication/Data/ZIELINSKIW_IO_replication.pdf" target="_blank">Referee report</a> of Tsivanidis, Nick. 2026. "Evaluating the Impact of Urban Transit Infrastructure: Evidence from Bogotá's TransMilenio." <em>American Economic Review</em> 116 (2): 418–63.</li>
+            </ul>
+
+            <p>I'm also a research replicator at the Journal of Political Economy. For more info, look <a href="https://jpedataeditor.github.io" target="_blank">here</a>.</p>
+        </div>
+
+        <aside>
+            <h2>My Links</h2>
+            <ul class="sidebar-links">
+                <li><a href="https://www.eui.eu/Content-Types-Assets/PersonalWebsites/CVs/wiktor-zielinski-cv.pdf" target="_blank">Curriculum Vitae</a></li>
+                <li><a href="https://www.eui.eu/people?id=wiktor-zielinski" target="_blank">EUI Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/wiktor-zielinski99/" target="_blank">LinkedIn</a></li>
+            </ul>
+
+            <h2>Contact Info</h2>
+            <ul class="contact-info">
+                <li><a href="mailto:wiktor.zielinski@eui.eu">wiktor.zielinski@eui.eu</a></li>
+            </ul>
+
+            <h2>Location</h2>
+            <p>Poland - Florence</p>
+        </aside>
+    </main>
+</div>
+
+</body>
+</html>
