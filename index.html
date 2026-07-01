@@ -3,83 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiktor Zielinski - Personal Website</title>
+    <title>Wiktor Zielinski | Economist & PhD Candidate at EUI</title>
+    <meta name="description" content="Official website of Wiktor Zielinski, PhD student in Economics at the European University Institute (EUI) specializing in macro spatial and development economics.">
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Wiktor Zielinski",
+      "jobTitle": "PhD Candidate in Economics",
+      "affiliation": {
+        "@type": "EducationalOrganization",
+        "name": "European University Institute",
+        "alternateName": "EUI"
+      },
+      "url": "https://wiktorze.github.io",
+      "image": "https://www.eui.eu/Content-Types-Assets/Uploads/People/Photos/Zielinski-Wiktor.x7e57038c.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/wiktor-zielinski99/",
+        "https://www.eui.eu/people?id=wiktor-zielinski",
+        "https://me.eui.eu/wiktor-zielinski"
+      ],
+      "knowsAbout": ["Economics", "Macro Spatial Economics", "Development Economics"]
+    }
+    </script>
+
     <style>
         :root {
-            --primary-color: #003366; /* EUI Blue */
-            --text-color: #333333;
-            --link-color: #0055a4;
-            --bg-color: #f9f9f9;
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --bg-body: #f4f7f6;
+            --bg-card: #ffffff;
+            --border-color: #e1e8ed;
         }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-body);
             margin: 0;
             padding: 0;
         }
+
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            max-width: 1000px;
+            margin: 3rem auto;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
         }
+
         header {
             display: flex;
             align-items: center;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 2rem;
-            margin-bottom: 2rem;
+            padding: 4rem;
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
         }
+
         .profile-img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 220px;
+            height: 220px;
             object-fit: cover;
-            margin-right: 2rem;
+            margin-right: 3rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border: 4px solid #fff;
         }
-        h1 {
+
+        .header-content h1 {
             color: var(--primary-color);
+            font-size: 2.8rem;
             margin: 0 0 0.5rem 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            max-width: 600px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            padding: 3rem 4rem;
+            gap: 4rem;
+        }
+
         h2 {
             color: var(--primary-color);
-            border-bottom: 1px solid #eeeeee;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 0.5rem;
-            margin-top: 2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            display: inline-block;
         }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+        }
+
         a {
-            color: var(--link-color);
+            color: var(--accent-color);
             text-decoration: none;
+            transition: color 0.2s ease;
         }
+
         a:hover {
+            color: #2980b9;
             text-decoration: underline;
         }
-        .contact-info, .sidebar-links {
+
+        .sidebar-section {
+            margin-bottom: 3rem;
+            background: #fafbfc;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-section h2 {
+            font-size: 1.2rem;
+            border-bottom: none;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .sidebar-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        .contact-info li, .sidebar-links li {
-            margin-bottom: 0.5rem;
+
+        .sidebar-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
         }
-        main {
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 2rem;
+
+        .sidebar-list li::before {
+            content: "→";
+            color: var(--accent-color);
+            margin-right: 8px;
+            font-weight: bold;
         }
-        @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr;
-            }
+
+        /* Responsive Design */
+        @media (max-width: 850px) {
             header {
                 flex-direction: column;
                 text-align: center;
+                padding: 3rem 2rem;
             }
             .profile-img {
-                margin: 0 0 1rem 0;
+                margin: 0 0 2rem 0;
+                width: 180px;
+                height: 180px;
+            }
+            .bio {
+                margin: 0 auto;
+            }
+            main {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+                gap: 2rem;
+            }
+            .container {
+                margin: 1rem;
             }
         }
     </style>
@@ -89,10 +200,10 @@
 <div class="container">
     <header>
         <img src="https://www.eui.eu/Content-Types-Assets/Uploads/People/Photos/Zielinski-Wiktor.x7e57038c.jpg?w=800&h=800" alt="Wiktor Zielinski" class="profile-img">
-        <div>
+        <div class="header-content">
             <h1>Wiktor Zielinski</h1>
-            <p><strong>PhD student in Economics</strong> at the European University Institute in Florence.</p>
-            <p>My interests lie in macro spatial and development economics. Questions that I find troubling refer to non-convergence of regions in time and how infrastructure & transportation affects this issue.</p>
+            <p class="subtitle">PhD Candidate in Economics at the European University Institute</p>
+            <p class="bio">My interests lie in macro spatial and development economics. Questions that I find troubling refer to non-convergence of regions in time and how infrastructure & transportation affects this issue.</p>
         </div>
     </header>
 
@@ -117,20 +228,22 @@
         </div>
 
         <aside>
-            <h2>My Links</h2>
-            <ul class="sidebar-links">
-                <li><a href="https://www.eui.eu/Content-Types-Assets/PersonalWebsites/CVs/wiktor-zielinski-cv.pdf" target="_blank">Curriculum Vitae</a></li>
-                <li><a href="https://www.eui.eu/people?id=wiktor-zielinski" target="_blank">EUI Profile</a></li>
-                <li><a href="https://www.linkedin.com/in/wiktor-zielinski99/" target="_blank">LinkedIn</a></li>
-            </ul>
+            <div class="sidebar-section">
+                <h2>Links</h2>
+                <ul class="sidebar-list">
+                    <li><a href="https://www.eui.eu/Content-Types-Assets/PersonalWebsites/CVs/wiktor-zielinski-cv.pdf" target="_blank">Curriculum Vitae</a></li>
+                    <li><a href="https://www.eui.eu/people?id=wiktor-zielinski" target="_blank">EUI Profile</a></li>
+                    <li><a href="https://www.linkedin.com/in/wiktor-zielinski99/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
 
-            <h2>Contact Info</h2>
-            <ul class="contact-info">
-                <li><a href="mailto:wiktor.zielinski@eui.eu">wiktor.zielinski@eui.eu</a></li>
-            </ul>
-
-            <h2>Location</h2>
-            <p>Poland - Florence</p>
+            <div class="sidebar-section">
+                <h2>Contact</h2>
+                <ul class="sidebar-list">
+                    <li><a href="mailto:wiktor.zielinski@eui.eu">wiktor.zielinski@eui.eu</a></li>
+                </ul>
+                <p style="margin-top: 1.5rem; color: #666;">📍 Poland / Florence</p>
+            </div>
         </aside>
     </main>
 </div>
