@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #0f172a;
+    --primary-light: #1e293b;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --transition-fast: 0.15s ease;
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-body);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 4rem auto;
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 4rem 5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-img-container {
+    flex-shrink: 0;
+    margin-right: 4rem;
+    position: relative;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: var(--shadow-md);
+    border: 4px solid #ffffff;
+    transition: var(--transition-smooth);
+}
+
+.profile-img:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-hover);
+}
+
+.header-content {
+    flex: 1;
+}
+
+.header-content h1 {
+    color: var(--primary);
+    font-size: 3rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+
+.bio {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    max-width: 650px;
+    font-weight: 300;
+}
+
+/* Main Layout */
+main {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    padding: 4rem 5rem;
+    gap: 5rem;
+}
+
+/* Typography & Content Elements */
+h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 40px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: var(--transition-fast);
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* List Items / Project Cards */
+ul.project-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+ul.project-list li {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+ul.project-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--accent);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+ul.project-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}
+
+ul.project-list li:hover::before {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+/* Sidebar */
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.sidebar-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-list li {
+    margin-bottom: 1rem;
+}
+
+.sidebar-list a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: var(--bg-body);
+    border-radius: 8px;
+    color: var(--primary-light);
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: var(--transition-smooth);
+}
+
+.sidebar-list a:hover {
+    background: #ffffff;
+    border-color: var(--border-color);
+    box-shadow: var(--shadow-sm);
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+.sidebar-list a svg {
+    margin-right: 0.75rem;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    opacity: 0.7;
+    transition: var(--transition-fast);
+}
+
+.sidebar-list a:hover svg {
+    opacity: 1;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+}
+
+/* Section specific styling */
+.content-section {
+    margin-bottom: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        margin: 2rem;
+        width: auto;
+    }
+    main, header {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 850px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 2rem;
+    }
+    
+    .profile-img-container {
+        margin: 0 0 2rem 0;
+    }
+    
+    .profile-img {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .bio {
+        margin: 0 auto;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 3rem;
+    }
+    
+    aside {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
